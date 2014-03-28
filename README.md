@@ -20,7 +20,21 @@
 ## Usage
 
 ```javascript
-EXAMPLEHERE
+var File = require('vinyl');
+var ftree = require('vinyl-fs-tree');
+
+var files = [];
+files.push(new File({
+  path: 'file.txt',
+  content: new Buffer('use your imagination')
+}));
+files.push(new File({
+  path: 'folder/file2.txt',
+  content: new Buffer('use your imagination')
+}));
+
+var tree = ftree.create(files);
+
 ```
 
 [npm-url]: https://npmjs.org/package/vinyl-fs-tree
