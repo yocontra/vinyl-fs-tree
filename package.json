@@ -1,0 +1,36 @@
+{
+  "name": "vinyl-fs-tree",
+  "description": "Create a filesystem tree from vinyl files",
+  "version": "0.0.1",
+  "homepage": "http://github.com/wearefractal/vinyl-fs-tree",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wearefractal/vinyl-fs-tree.git"
+  },
+  "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+  "main": "./index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "should": "~3.1.0",
+    "mocha-lcov-reporter": "~0.0.1",
+    "coveralls": "~2.6.1",
+    "istanbul": "~0.2.3",
+    "rimraf": "~2.2.5",
+    "jshint": "~2.4.1",
+    "vinyl": "^0.2.3"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec && jshint",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/wearefractal/vinyl-fs-tree/raw/master/LICENSE"
+    }
+  ]
+}
